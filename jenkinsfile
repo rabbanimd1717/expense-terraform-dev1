@@ -11,14 +11,14 @@ pipeline {
         stage('Init') {
             steps {
                 sh """
-                 ls -ltr
+                 cd 01-vpc
+                 terraform init -reconfigure
                 """
             }
         }
         stage('Plan') {
             steps {
                 sh 'echo this is test stage'
-                sh 'sleep 10'
             }
         }
         stage('Deploy') {
