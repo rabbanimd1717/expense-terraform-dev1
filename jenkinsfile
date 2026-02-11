@@ -22,7 +22,7 @@ pipeline {
         }
         stage('Plan') {
             when {
-                expresion {
+                expression {
                     params.action == 'Apply'
                 }
             }
@@ -35,7 +35,7 @@ pipeline {
         }
         stage('Deploy') {
             when {
-                expresion {
+                expression {
                     params.action == 'Apply'
                 }
             }
@@ -52,7 +52,7 @@ pipeline {
         }
         stage('Destroy') {
             when {
-                expresion {
+                expression {
                     params.action == 'Destroy'
                 }
             }
